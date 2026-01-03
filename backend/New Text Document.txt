@@ -1,0 +1,24 @@
+const express = require("express");
+const cors = require("cors");
+const app = express();
+
+app.use(cors());
+app.use(express.json());
+
+let latestResult = {};  // store the latest CloudSim result
+
+// Endpoint for JADE ManagerAgent to send CloudSim result
+app.post("/api/sim-result", (req, res) => {
+    console.log("🟢 Simulation Result Received:", req.body);
+    latestResult = req.body;
+    res.json({ status: "OK" });
+});
+
+// Endpoint for React dashboard to fetch latest result
+app.get("/api/sim-result", (req, res) => {
+    res.json(latestResult);
+});
+
+app.listen(5000, () => {
+    console.log("🚀 Backend server running on http://localhost:5000");
+});

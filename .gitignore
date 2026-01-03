@@ -1,0 +1,21 @@
+# ===== Java build artifacts =====
+*.class
+out/
+lib/
+cloudsimplus-*/
+
+# ===== Node / React =====
+node_modules/
+build/
+dist/
+
+# ===== IDE =====
+.idea/
+.vscode/
+
+# ===== OS =====
+Thumbs.db
+.DS_Store
+
+# ===== Archives =====
+*.zip

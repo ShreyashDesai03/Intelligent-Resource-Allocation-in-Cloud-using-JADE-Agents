@@ -1,0 +1,13 @@
+📊 Performance metrics (execution time, utilization)
+
+🧠 Smarter scheduling (least-loaded / priority-based)
+
+⚖️ Load balancing across agents
+
+📈 Auto-scaling policies (threshold-based)
+
+📝 Logging & analytics dashboard
+
+🔐 Authentication / role-based access
+
+📦 Dockerization & deployment (Git + Vercel
