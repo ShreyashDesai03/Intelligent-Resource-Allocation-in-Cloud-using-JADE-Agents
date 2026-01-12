@@ -139,6 +139,7 @@ Intelligent-Resource-Allocation-in-Cloud-using-JADE-Agents/
 * Multi-agent coordination using JADE
 * Auto-registration of ResourceAgents
 * Real-time analytics dashboard
+* Auto-scaling policies
 * Modular and extensible design
 
 ---
@@ -156,7 +157,6 @@ This project is useful for:
 
 ## 🚀 Future Enhancements
 
-* Auto-scaling policies
 * Fault-tolerant agents
 * Advanced scheduling algorithms
 * Cloud cost optimization models
