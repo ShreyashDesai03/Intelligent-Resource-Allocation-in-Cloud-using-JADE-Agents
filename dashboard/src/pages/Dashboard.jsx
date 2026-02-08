@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+/* ============================
+   NGROK BACKEND BASE URL
+   ============================ */
+const API_BASE = "https://nonresponsible-goodlier-kristan.ngrok-free.dev";
+
 function Dashboard() {
   const navigate = useNavigate();
 
@@ -22,7 +27,7 @@ function Dashboard() {
   // ----------------------------
   useEffect(() => {
     const poll = setInterval(() => {
-      fetch("http://localhost:5000/api/instances")
+      fetch(`${API_BASE}/api/instances`)
         .then(res => res.json())
         .then(setInstances)
         .catch(() => {});
@@ -40,7 +45,7 @@ function Dashboard() {
       return;
     }
 
-    await fetch("http://localhost:5000/api/submit-task", {
+    await fetch(`${API_BASE}/api/submit-task`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ cpu, ram, disk, mips }),
@@ -53,7 +58,7 @@ function Dashboard() {
   };
 
   const post = (url, body) =>
-    fetch(`http://localhost:5000${url}`, {
+    fetch(`${API_BASE}${url}`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(body),
@@ -306,3 +311,4 @@ const styles = {
 };
 
 export default Dashboard;
+
